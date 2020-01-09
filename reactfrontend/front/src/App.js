@@ -1,47 +1,26 @@
-import React, { Component } from 'react';
-
-import Toolbar from './components/Toolbar/Toolbar';
-import SideDrawer from './components/SideDrawer/SideDrawer';
-import Backdrop from './components/Backdrop/Backdrop';
+import React from 'react';
+import { Route } from "react-router-dom";
 
 
+import Home from './components/Home';
+import LoginCredentials from './components/Listing/Login';
+import Host from './components/Listing/Register';
+import ListingInput from './components/Listing/ListingInput';
 
-class App extends Component {
-  state = {
-    sideDrawerOpen: false
-  };
-  
-  drawertoggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
-    });
-  };
 
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
-  };
-
- render () {
-   let backdrop;
-
-   if (this.state.sideDrawerOpen) {
-     backdrop = <Backdrop click={this.backdropClickHandler} />;
-   }
+ function App () {
+ 
    return (
-     <div style={{height: '100%'}}>
-       <Toolbar drawerClickHandler={this.drawertoggleClickHandler}/>
-       <SideDrawer show={this.state.sideDrawerOpen}/>
-       {backdrop}
+     <div>
       
-       
-       <main style={{marginTop: '64px'}}>
-       
-      </main>
-      
+      <Route exact path="/" component={Home}/>
+      <Route path="/login" component={LoginCredentials} />
+      <Route path="/register" component={Host}/>
+      <Route path="/listing" component={ListingInput}/>
 
      </div>
    );
  }
-}
+
     
 export default App;

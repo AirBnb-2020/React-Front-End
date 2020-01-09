@@ -1,0 +1,54 @@
+select.ui.selection.dropdown {
+    margin: 5px;
+  }
+  
+  .ui.container {
+    margin: 40px;
+   
+  }
+  
+  input.field {
+    margin:5px;
+  }
+  
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 2px 2px 2px 2px black;
+    
+  }
+  
+  form.ui.form {
+    font-size: .5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 2%;
+    width: 20%;
+    box-shadow: 5px 5px 5px 5px black;
+    background-color: white;
+    color:  black;
+    
+  }
+  
+  .ui.button{
+    font-size: .5rem;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    box-shadow: .5px .5px .5px .5px black;
+  
+  }
+
+  .ui.button a {
+
+    text-decoration: none !important;
+    color: black;
+
+  }
+
+  
